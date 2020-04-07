@@ -1,13 +1,4 @@
-// var phoneno = /^\d{10}$/;
-// if((inputtxt.value.match(phoneno))
-// {
-//     return true;
-// }
-// else
-// {
-//     alert("message");
-//     return false;
-// }
+
 const username = document.getElementById('username');
 const phone = document.getElementById('phone');
 const email = document.getElementById('email');
@@ -16,6 +7,7 @@ const form = document.getElementById('form');
 console.log(phone.value);
 form.addEventListener('submit', (e) => {
     var phoneno = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var flag = 0;
     if (username.value === '' || name.value === null ) {
         document.getElementById('usernameSpan').style.visibility = 'visible';
@@ -31,7 +23,7 @@ form.addEventListener('submit', (e) => {
         document.getElementById('phoneSpan').style.visibility = 'hidden';
     }
 
-    if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value))) {
+    if (!(email.value.match(mailformat)|| !(email. valueOf('@')))) {
         document.getElementById('emailSpan').style.visibility = 'visible';
         e.preventDefault();
     } else {
