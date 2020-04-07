@@ -12,9 +12,9 @@ html,body
    border-bottom-left-radius: 15px;
    border-bottom-right-radius: 15px;
 }
-.form .container .row
+.form .container .center
 {
-    height: 600px;
+    height: 750px;
 }
 .form form label
 {
